@@ -10,6 +10,7 @@ body{
     font-weight: 100;
     border-top-left-radius: 30px;
     transition: all ease-in-out 400ms;
+    cursor: pointer;
 }
 #headTag:hover{
     background-color: gray;
