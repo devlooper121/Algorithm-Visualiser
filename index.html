@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visualiser</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav id="navBar">
+        <div class="row">
+            <div class="column">
+                <h1 class="heading">Shorthin Algorithm Visualiser</h1>
+                <button class="navButton" id="newArrayButton">New Array</button>
+                <div class="slideContainer">
+                    <input type="range" class="slider" id="myRange" min="10" max="300" value="100">
+                    <p style="margin: 0;">select size</p>
+                </div>
+            </div>
+            <div class="column">
+                <button class="navButton" id="bubbleSort">Bubble</button>
+                <button class="navButton">Quick</button>
+                <button class="navButton" id="mergeSort">Merge</button>
+                <button class="navButton" id="selectionSort">Selection</button>
+                <div class="slideContainer">
+                    <input type="range" class="slider" id="mySpeed" min="1" max="51" value="2" step="2">
+                    <p style="margin: 0;">set speed</p>
+                </div>
+                <button class="navButton stopBtn" id="stop">Stop</button>
+            </div>
+        </div>   
+    </nav>
+    <hr class="seperator">
+    <main id="arrayArea">
+        <div id="randomArray">
+
+        </div>
+        <hr id="base">
+    </main>
+    <footer>
+        <hr class="seperator">
+        <p>All right reserve @DheerajShrivastva</p>
+    </footer>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript">
+        let arrayContainer1 = document.getElementById("randomArray");
+        function generateArray1() {
+            let arr = [];
+            for (var i = 0; i < 100; i++) {
+
+                var randomNum = Math.floor(Math.random() * 500 + 50);
+                var arrayDiv = document.createElement("div");
+                arrayDiv.classList.add("array");
+                arrayDiv.style.height = randomNum + "px";
+                arr.push(randomNum);
+                arrayContainer1.appendChild(arrayDiv);
+            }
+        }
+        window.onload = generateArray1;
+    </script>
+</body>
+
+</html>
