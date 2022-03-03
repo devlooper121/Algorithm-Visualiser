@@ -12,7 +12,7 @@ body{
     transition: all ease-in-out 400ms;
 }
 #headTag:hover{
-    background-color: blue;
+    background-color: gray;
     color: white;
 }
 .heading {
